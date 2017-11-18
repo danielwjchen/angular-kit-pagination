@@ -1,0 +1,42 @@
+//-
+    Defines <dc-pagination> template
+ul.list-inline(
+    ng-show="itemCount > 0"
+)
+    li
+        | Page&nbsp;
+    li
+        input.form-control.input-sm(
+            ng-model="currentPage"
+            type="number"
+        )
+    li
+        strong
+            | showing 
+    li
+        strong
+            | {{(currentPage -1) * pageSize +1}} - {{getItemsShown()}} 
+    li
+        | of 
+    li
+        strong
+            | {{itemCount}}
+    li
+        ul.pagination
+            li(
+                ng-attr-class="{{currentPage <= 1 ? 'disabled' : ''}}"
+            )
+                a(
+                    href="#"
+                    ng-click="goToPreviousPage($event)"
+                )
+                    | &laquo;
+            li(
+                ng-attr-class="{{currentPage >= getNumberOfPages()? 'disabled' : ''}}"
+            )
+                a(
+                    href="#"
+                    ng-click="goToNextPage($event)"
+                )
+                    | &raquo;
+

@@ -1,0 +1,14 @@
+/**
+ * Implements CSS styles for <ng-kit-pagination>
+ */
+ng-kit-pagination {
+    input[type="number"] {
+        width: 64px;
+        text-align: right;
+    }
+    ul {
+        li {
+            vertical-align: middle;
+        }
+    }
+}
