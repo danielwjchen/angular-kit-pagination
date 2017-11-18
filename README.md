@@ -1,4 +1,4 @@
-#Angular Kit Pagination
+# Angular Kit Pagination
 Angular Kit Pagination is a angular directive built with Bootstrap 3.
 
 ## Development
