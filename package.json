@@ -12,6 +12,11 @@
     "angular": "^1.5.11",
     "bootstrap-sass": "^3.3.7"
   },
+  "files": [
+    "index.js",
+    "dist/",
+    "src/"
+  ],
   "devDependencies": {
     "angular-template-compiler": "github:s1300045/node-angular-template-compiler",
     "grunt": "^1.0.1",
