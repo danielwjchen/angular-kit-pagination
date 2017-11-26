@@ -11,6 +11,7 @@ module.exports = function(grunt, configs) {
             files : {
                 'dist/ng.kit.pagination.min.js': [
                     'dist/ng.kit.pagination.templates.js',
+                    'src/pagination.js',
                     'src/pagination.directive.js',
                 ],
             }
