@@ -1,0 +1,64 @@
+doctype html
+html(
+    lang="en"
+)
+    head
+        meta(
+            content="text/html;charset=utf-8",
+            http-equiv="Content-Type"
+        )
+        meta(
+            content="utf-8",
+            http-equiv="encoding"
+        )
+        style.
+            | a[href], button { touch-action: manipulation; } /** removes 300 ms delay on mobile IE **/
+
+        title #{title}
+        meta(
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+        )
+        link(
+            rel="stylesheet"
+            type="text/css"
+            href="/node_modules/bootstrap/dist/css/bootstrap.min.css"
+        )
+        link(
+            rel="stylesheet"
+            type="text/css"
+            href="/node_modules/bootstrap/dist/css/bootstrap-theme.min.css"
+        )
+        link(
+            rel="stylesheet"
+            type="text/css"
+            href="/node_modules/angular-kit-pagination/dist/ng.kit.pagination.min.css"
+        )
+    body(
+        ng-app="ng.kit.pagination.example"
+    )
+        h1
+            | #{title}
+        .container
+            .row
+                .col-md-12(
+                    ng-controller='IndexController'
+                )
+                    ng-kit-pagination(
+                        size="pagination.size"
+                        number="pagination.number"
+                        count="pagination.count"
+                        on-page-change="pagination.onPageChange"
+                    )
+        script(
+            type="text/javascript"
+            src="/node_modules/angular/angular.min.js"
+        )
+        script(
+            type="text/javascript"
+            src="/node_modules/angular-kit-pagination/dist/ng.kit.pagination.min.js"
+        )
+        script(
+            type="text/javascript"
+            src="/src/app.js"
+        )

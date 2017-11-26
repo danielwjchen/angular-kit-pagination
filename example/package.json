@@ -1,0 +1,21 @@
+{
+  "name": "angular-kit-pagination-example",
+  "version": "1.0.0",
+  "description": "An example shows how to use the <ng-kit-pagination> directive.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "bootstrap"
+  ],
+  "author": "dchen@inquiresimplicity.com",
+  "license": "ISC",
+  "dependencies": {
+    "angular-kit-pagination": "file:..",
+    "bootstrap": "^3.3.7",
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  }
+}
