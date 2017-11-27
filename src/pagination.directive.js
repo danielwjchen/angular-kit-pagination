@@ -1,9 +1,9 @@
 /**
- * Defines <dc-pagination>
+ * Defines <ng-kit-pagination>
  */
 (function(angular) {
     'use strict';
-    angular.module('ng.kit.pagination')
+    angular.module('ng-kit.pagination')
     .directive('ngKitPagination', function() {
         return {
             restrict: 'E',

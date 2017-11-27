@@ -1,7 +1,7 @@
 'use strict';
 (function(angular) {
-    angular.module('ng.kit.pagination.example', [
-        'ng.kit.pagination',
+    angular.module('ng-kit.pagination.example', [
+        'ng-kit.pagination',
     ])
     .controller('IndexController', function($scope) {
         $scope.pagination = {

@@ -1,3 +1,3 @@
-require('./dist/ng.kit.pagination.min');
+require('./dist/ng-kit.pagination.min');
 
-module.exports = 'ng.kit.pagination';
+module.exports = 'ng-kit.pagination';

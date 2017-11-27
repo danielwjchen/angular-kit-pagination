@@ -3,7 +3,7 @@ module.exports = function(grunt) {
 	grunt.config.set('sass', {
         compile: {
             files: {
-                'dist/ng.kit.pagination.css': 'src/pagination.directive.scss',
+                'dist/ng-kit.pagination.css': 'src/pagination.directive.scss',
             },
         },
         minify: {
@@ -11,7 +11,7 @@ module.exports = function(grunt) {
                 style: 'compressed',
             },
             files: {
-                'dist/ng.kit.pagination.min.css': 'src/pagination.directive.scss',
+                'dist/ng-kit.pagination.min.css': 'src/pagination.directive.scss',
             },
         },
 	});

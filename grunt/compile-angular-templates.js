@@ -6,7 +6,7 @@ var nodels = require('node-ls');
 var angularTemplateCompiler = require('angular-template-compiler');
 
 module.exports = function(grunt) {
-    var angularJSModuleName = 'ng.kit.pagination.templates';
+    var angularJSModuleName = 'ng-kit.pagination.templates';
     var configs = {};
     var srcFolderPath = 'src/';
     var distFilePath = 'dist/' + angularJSModuleName + '.js';
