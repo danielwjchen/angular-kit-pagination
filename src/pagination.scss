@@ -2,6 +2,7 @@
  * Implements CSS styles for <ng-kit-pagination>
  */
 ng-kit-pagination {
+    display: block;
     input[type="number"] {
         width: 64px;
         text-align: right;

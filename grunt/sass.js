@@ -10,7 +10,7 @@ module.exports = function(grunt) {
                 ],
             },
             files: {
-                'dist/ng-kit.pagination.css': 'src/pagination.directive.scss',
+                'dist/ng-kit.pagination.css': 'src/pagination.scss',
             },
         },
 	});

@@ -1,6 +1,6 @@
 'use strict';
 var angular = require('angular');
-var ngKitPagination = require('../../index.js');
+var ngKitPagination = require('../../src/pagination');
 
 (function(angular) {
     angular.module('ng-kit.pagination.example', [

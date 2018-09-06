@@ -12,26 +12,20 @@ module.exports = function(grunt) {
     require('./grunt/express-server')(grunt);
     require('./grunt/sass')(grunt);
     require('./grunt/jshint')(grunt);
-    require('./grunt/uglify')(grunt);
     require('./grunt/watch')(grunt);
     require('./grunt/webpack')(grunt);
-    require('./grunt/compile-angular-templates')(grunt);
 
     var taskDefinition = {
         'compile': [
             'clean:all', 
-            'compile-angular-templates', 
             'jshint', 
             'sass', 
-            'uglify',
             'webpack:compile'
         ],
         'develop': [
             'clean:all', 
-            'compile-angular-templates',
             'jshint', 
             'sass', 
-            'uglify',
             'webpack:develop',
             'express',
             'watch',

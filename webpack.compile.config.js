@@ -1,6 +1,6 @@
 var path = require('path');
 module.exports = {
-    entry: './index.js',
+    entry: './src/pagination.js',
     output: {
         filename: 'ng-kit.pagination.bundle.js',
         path: path.resolve(__dirname, 'dist')
@@ -10,12 +10,16 @@ module.exports = {
       'angular': 'angular',
     },
     module: {
-        rules: [
-          {
-            test: /\.js$/,
-            use: ["source-map-loader"],
-            enforce: "pre"
-          }
-        ]
-      }
+      rules: [
+        {
+          test: /\.js$/,
+          use: ["source-map-loader"],
+          enforce: "pre"
+        },
+        {
+          test: /\.pug$/,
+          use: ["pug-loader"],
+        }
+      ]
+    }
 };

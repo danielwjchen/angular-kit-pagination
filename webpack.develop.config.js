@@ -10,12 +10,16 @@ module.exports = {
       'angular': 'angular',
     },
     module: {
-        rules: [
-          {
-            test: /\.js$/,
-            use: ["source-map-loader"],
-            enforce: "pre"
-          }
-        ]
-      }
+      rules: [
+        {
+          test: /\.js$/,
+          use: ["source-map-loader"],
+          enforce: "pre"
+        },
+        {
+          test: /\.pug$/,
+          use: ["pug-loader"],
+        }
+      ]
+    }
 };

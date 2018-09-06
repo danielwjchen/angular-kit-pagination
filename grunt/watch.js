@@ -22,10 +22,8 @@ module.exports = function (grunt) {
             ],
             tasks: [
                 'clean:all', 
-                'compile-angular-templates',
                 'jshint', 
                 'sass', 
-                'uglify',
                 'webpack:develop',
             ],
         },
