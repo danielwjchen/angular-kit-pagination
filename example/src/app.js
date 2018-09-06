@@ -1,7 +1,10 @@
 'use strict';
+var angular = require('angular');
+var ngKitPagination = require('../../index.js');
+
 (function(angular) {
     angular.module('ng-kit.pagination.example', [
-        'ng-kit.pagination',
+        ngKitPagination,
     ])
     .controller('IndexController', function($scope) {
         $scope.pagination = {

@@ -9,30 +9,34 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
     });
     require('./grunt/clean')(grunt);
+    require('./grunt/express-server')(grunt);
     require('./grunt/sass')(grunt);
     require('./grunt/jshint')(grunt);
     require('./grunt/uglify')(grunt);
     require('./grunt/watch')(grunt);
+    require('./grunt/webpack')(grunt);
     require('./grunt/compile-angular-templates')(grunt);
 
     var taskDefinition = {
         'compile': [
             'clean:all', 
             'compile-angular-templates', 
-            'sass', 
-            'jshint', 'uglify',
-        ],
-        'compile-scripts': [
-            'clean:scripts',
-            'compile-angular-templates', 
             'jshint', 
-            'uglify',
-        ],
-        'compile-styles': [
-            'clean:styles',
             'sass', 
+            'uglify',
+            'webpack:compile'
         ],
-        'default': ['compile', 'watch']
+        'develop': [
+            'clean:all', 
+            'compile-angular-templates',
+            'jshint', 
+            'sass', 
+            'uglify',
+            'webpack:develop',
+            'express',
+            'watch',
+        ],
+        'default': ['compile',]
     };
     Object.keys(taskDefinition).forEach(function(taskName) {
         grunt.registerTask(taskName, taskDefinition[taskName])

@@ -8,28 +8,27 @@ module.exports = function (grunt) {
              },
              interval: 1000,
         },
-        'watch-scripts': {
+        'develop': {
             files: [
+                'index.js',
                 'grunt/**', 
                 'Gruntfile.js', 
-                'src/**/*.tpl.jade',
+                'src/**/*.tpl.pug',
                 'src/**/*.js', 
-            ],
-            tasks: ['compile-scripts'],
-        },
-        'watch-styles': {
-            files: [
                 'src/**/*.scss', 
+                'example/index.js',
+                'example/templates/*.pug', 
+                'example/src/*.js', 
             ],
-            tasks: ['compile-styles'],
+            tasks: [
+                'clean:all', 
+                'compile-angular-templates',
+                'jshint', 
+                'sass', 
+                'uglify',
+                'webpack:develop',
+            ],
         },
-        'watch-assets': {
-            files: [
-                'src/fonts/**/*', 
-                'src/images/**/*', 
-            ],
-            tasks: ['copy:images', 'copy:fonts',],
-        }
 	});
     grunt.loadNpmTasks('grunt-contrib-watch');
 };
