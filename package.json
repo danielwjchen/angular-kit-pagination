@@ -15,6 +15,7 @@
   "scripts": {
     "prepublish": "grunt compile"
   },
+  "main": "dist/ng-kit.pagination.bundle.js",
   "files": [
     "dist/",
     "src/"
